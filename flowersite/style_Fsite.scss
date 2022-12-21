@@ -1,0 +1,44 @@
+#content{
+    height: 2458px;
+}
+#banner{   
+    height: 300px;
+}
+#About{
+    margin-top: 25px;
+    font-size: 14pt;
+}
+#AboutZag{
+    font-weight: bold;
+    font-size: 16pt;
+    text-align: center;
+}
+#images{
+    margin-top: 40px;
+    text-align: center;
+    height: 680px;
+}
+img {
+    transition: transform 0.25s;
+} 
+.uvel:hover img {
+    transform: scale(1.05);
+}
+.incontent{
+    width: 800px;
+}
+.line{
+    margin-top: 28px;
+    width: 800px;
+    height: 2px;
+    background-color: rgb(250, 61, 112);
+}
+#minicat{
+    margin-top: 28px;
+    width: 760px;
+    height: 975px;
+    padding-left: 40px;
+}
+.block{
+    padding-left: 15px;
+}

@@ -1,0 +1,43 @@
+#content {
+  height: 1000px;
+}
+
+#About {
+  margin-top: 25px;
+  font-size: 14pt;
+}
+
+#AboutZag {
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+.incontent {
+  width: 800px;
+}
+
+.otstup {
+  height: 15px;
+}
+
+.Zag {
+  font-weight: bold;
+}
+
+.uvel {
+  float: left;
+}
+
+img {
+  transition: transform 0.25s;
+}
+
+.uvel:hover img {
+  transform: scale(1.05);
+}
+
+.incontent2 {
+  margin-top: 50px;
+  width: 850px;
+  height: 250px;
+}/*# sourceMappingURL=style_About.css.map */

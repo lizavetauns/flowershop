@@ -1,0 +1,115 @@
+#content{
+    height: 1800px;
+    padding-left: 30px;
+}
+.fix {
+    width: 970px;
+}
+#left{
+    width: 250px;
+    position: absolute;
+}
+#right{
+    width: 690px;
+    float:right;
+    margin-right: 30px;
+}
+.block{
+    height: 320px;
+    width: 164px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.card{
+    height: 315px;
+    width: 160px;
+}
+.button{
+    margin-bottom: 10px;
+}
+button{
+    width: 100px;
+}
+.opis{
+    text-align: center;
+    font-size: 10pt;
+    color:rgb(133, 133, 133);
+    height:65px; 
+}
+.image{
+    padding-left: 5px;
+}
+.str{
+    height: 50px;
+    width: 1000px;
+}
+#price{
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.pricem{
+    border: 1px #ddd solid;
+    background: #f8f8f8;
+    padding: 0 6px;   
+    min-height: 24px;
+    outline: 0;
+    width: 35%;
+}
+.t-checkbox__indicator{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    transition: all .2s;
+    opacity: .6;
+}
+.typeFilter{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.checkbox{
+    box-sizing: content-box;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.title{
+    font-size: 11pt;
+}
+label{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: left;
+    color: inherit;
+}
+.t-checkbox__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 1;
+}
+:after{
+    box-sizing: content-box;
+}
+label .checkbox:checked~.t-checkbox__indicator:after {
+    display: block;
+}
+label .checkbox:checked~.t-checkbox__indicator {
+    opacity: 1;
+}

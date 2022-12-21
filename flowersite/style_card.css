@@ -1,0 +1,68 @@
+#content {
+  height: 600px;
+  padding-left: 0;
+  width: 1000px;
+}
+
+.headRL2 {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+}
+
+#foto {
+  margin-left: 100px;
+  width: 300px;
+  height: 300px;
+}
+
+.fotom {
+  width: 99px;
+  height: 99px;
+  margin-right: 1px;
+  float: left;
+}
+
+#minif {
+  margin-left: 100px;
+  width: 300px;
+  height: 100px;
+}
+
+img {
+  transition: transform 0.25s;
+}
+
+.uvel:hover img {
+  transform: scale(1.05);
+}
+
+#name {
+  font-weight: bold;
+  font-size: 28pt;
+}
+
+#price {
+  margin-top: 30px;
+  font-size: 22pt;
+}
+
+button {
+  margin-top: 30px;
+  font-size: 14pt;
+  border-color: rgb(250, 61, 112);
+  background-color: rgb(250, 61, 112);
+  color: #FFFFFF;
+  width: 150px;
+  height: 40px;
+}
+
+#opis {
+  margin-top: 70px;
+  font-size: 14pt;
+}
+
+#op {
+  width: 450px;
+  margin-top: 10px;
+}/*# sourceMappingURL=style_card.css.map */

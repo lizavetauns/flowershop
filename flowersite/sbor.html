@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Цветочный магазин. Собрать букет</title>
+        <link rel="stylesheet" href="style_main.css">
+        <link rel="stylesheet" href="style_sbor.css">
+        <script>
+            var allprice = 0;
+            function func(op, price, idc) {
+            let c = '#'+idc;
+            let card =  document.querySelector(c);
+                switch (op) {
+                    case '+':
+                        result = Number.parseInt(card.querySelector('.pr').innerHTML) + 1;  
+                        allprice=allprice+price;
+                        break;
+                    case '-':
+                        result = Number.parseInt(card.querySelector('.pr').innerHTML) - 1;
+                        allprice=allprice-price; 
+                        break;
+                }
+            card.querySelector('.pr').textContent = result;            
+            document.getElementById('viewprice').textContent = allprice;
+            if (result > 0){
+                card.querySelector('.butl').disabled=false;
+                card.classList.add('cardBorder');
+            }
+            else{
+                card.querySelector('.butl').disabled=true;
+                card.classList.remove('cardBorder');
+            }
+            }
+			function fn(c){
+			return c.parentNode.parentNode.getAttribute('id')
+			}
+            function clickHandler () {
+            let cl= '';
+            const items = document.getElementsByClassName('cardBorder');
+            [...items].forEach((el) => {
+            cl = cl+el.querySelector('.name').innerHTML+'-'+el.querySelector('.pr').innerHTML+', ';
+            });
+            let params = cl+' --> Сумма: '+allprice;
+            let requestBody = {
+                payload: params
+            }
+            fetch('http://localhost:3000/api/newCallback',
+            {
+                method: 'post',
+                body: JSON.stringify(requestBody)
+            })
+            .then((resp) => {
+                return resp.text();
+            })
+        }
+        </script>
+    </head> 
+    <body bgcolor= "#faf2f2">
+        <div id="header" class="background"> 
+            <div id="header1" class="fix">
+                <div id="headverh">                   
+                    <div class="headRL">
+                        <div id="contacts" class = "text"> г. Иркутск
+                        ул. Уличная, 99
+                        +7 (999) 999-99-00</div>
+                    </div>
+                    <div id="headright" class="headRL" >
+                        <div id = "corsina"> <a href="corsina.html"><img src="image/corsine.svg" id="corsine" width="50" height="35" alt="LOGO"> </a>
+                            <div class = "text">0 руб.</div>
+                        </div>
+                    </div>
+                   <div class = "text"> <a href="Fsite.html" ><img src="image/logo.jpg" class="logo" width="210" height="60" alt="LOGO"> </a></div> 
+                </div>
+                <div id="headniz">
+                    <div id="navigation" class = "text"><a href="catalog.html" >КАТАЛОГ</a> <a href="sbor.html" class = "pad">СОБРАТЬ БУКЕТ</a> <a href="About.html" class = "pad">О НАС</a></div>        
+                </div> 
+            </div>            
+        </div>
+
+        <div id="content" class="fix">
+            <div id = "flowers">
+                <div class="zag">Цветы</div>
+                <div class="block"> 
+                    <div id="c1" class="card">
+                        <img src="sbor/flower/rose_red.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Роза красная</div>
+                        <div class = "price">100 руб.</div>
+                        <div class="button">
+                            <button class="butl" disabled onclick="func('-', 100,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 100,fn(this))" >+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div id="c2" class="card">
+                        <img src="sbor/flower/rose_roz.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Роза розовая</div>
+                        <div class = "price">100 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 100,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 100,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c3" class="card">
+                        <img src="sbor/flower/rose_yellow.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Роза желтая</div>
+                        <div class = "price">100 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 100,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 100,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c4" class="card">
+                        <img src="sbor/flower/anemon_blue.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Анемона голубая</div>
+                        <div class = "price">205 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 205,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 205,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="block">
+                    <div id="c5" class="card">
+                        <img src="sbor/flower/anemon_yellow.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Анемона желтая</div>
+                        <div class = "price">205 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 205,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 205,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>     
+                <div class="block">
+                    <div id="c6" class="card">
+                        <img src="sbor/flower/astra.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Астра</div>
+                        <div class = "price">90 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 90,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 90,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>    
+                <div class="block">
+                    <div id="c7" class="card">
+                        <img src="sbor/flower/gortenziya_blue.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Гортензия голубая</div>
+                        <div class = "price">130 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 130,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 130,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="block">
+                    <div id="c8" class="card">
+                        <img src="sbor/flower/gortenziya_red.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Гортензия красная</div>
+                        <div class = "price">130 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 130,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 130,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>  
+                <div class="block">
+                    <div id="c9" class="card">
+                        <img src="sbor/flower/hrizantema.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Хризантема</div>
+                        <div class = "price">200 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 200,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 200,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="block">
+                    <div id="c10" class="card">
+                        <img src="sbor/flower/liliya.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Лилия</div>
+                        <div class = "price">100 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 100,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 100,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c11" class="card">
+                        <img src="sbor/flower/siren.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Сирень</div>
+                        <div class = "price">120 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 120,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 120,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>  
+                <div class="block">
+                    <div id="c12" class="card">
+                        <img src="sbor/flower/tulip_red.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Тюльпан</div>
+                        <div class = "price">80 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 80,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 80,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>                           
+            </div>
+            <div class = "Decor">
+                <div class="zag">Декор</div>
+                <div class="block"> 
+                    <div id="c13" class="card">
+                        <img src="sbor/decor/aspidistra.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Аспидистра</div>
+                        <div class = "price">40 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 40,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 40,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div id="c14" class="card">
+                        <img src="sbor/decor/ecvalipt.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Эвкалипт</div>
+                        <div class = "price">50 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 50,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 50,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c15" class="card">
+                        <img src="sbor/decor/fistashka.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Фисташка</div>
+                        <div class = "price">30 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 30,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 30,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c16" class="card">
+                        <img src="sbor/decor/ruskus.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Рускус</div>
+                        <div class = "price">45 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 45,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 45,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="block">
+                    <div id="c17" class="card">
+                        <img src="sbor/decor/heart.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Сердце</div>
+                        <div class = "price">35 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 35,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+',35,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>     
+                <div class="block">
+                    <div id="c18" class="card">
+                        <img src="sbor/decor/bear.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Медвежонок</div>
+                        <div class = "price">35 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 35,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 35,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>    
+            <div class="block">
+                    <div id="c19" class="card">
+                        <img src="sbor/decor/batterfly.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Бабочка</div>
+                        <div class = "price">20 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 20,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 20,fn(this))">+</button>
+                        </div>
+                    </div>
+            </div>                                          
+            </div>
+            <div class = "Decor">
+                <div class="zag">Обертка</div>
+                <div class="block"> 
+                    <div id="c20" class="card">
+                        <img src="sbor/obertka/craftpaper.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Крафтовая бумага</div>
+                        <div class = "price">50 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 50,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 50,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div id="c21" class="card">
+                        <img src="sbor/obertka/foamiran.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Фоамиран</div>
+                        <div class = "price">35 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 35,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 35,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c22" class="card">
+                        <img src="sbor/obertka/papirosnpaper.jpeg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Папиросная бумага</div>
+                        <div class = "price">40 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 40,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 40,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c23" class="card">
+                        <img src="sbor/obertka/plenkamatov.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Пленка матовая</div>
+                        <div class = "price">30 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 30,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 30,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="block">
+                    <div id="c24" class="card">
+                        <img src="sbor/obertka/plenkaprozr.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Пленка прозрачная</div>
+                        <div class = "price">30 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 30,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 30,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>     
+                <div class="block">
+                    <div id="c25" class="card">
+                        <img src="sbor/obertka/korobka.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Коробка</div>
+                        <div class = "price">60 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 60,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+',60,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>                                           
+            </div>
+            <div id = "lenta">
+                <div class="zag">Лента</div>
+                <div class="block"> 
+                    <div id="c26" class="card">
+                        <img src="sbor/lenta/atlas.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Атласная</div>
+                        <div class = "price">35 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 35,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 35,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div id="c27" class="card">
+                        <img src="sbor/lenta/bumazhn.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Бумажная</div>
+                        <div class = "price">25 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 25,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 25,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c28" class="card">
+                        <img src="sbor/lenta/kruzhevna.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Кружевная</div>
+                        <div class = "price">40 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 40,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 40,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="c29" class="card">
+                        <img src="sbor/lenta/shifon.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Шифоновая</div>
+                        <div class = "price">30 руб.</div>
+                        <div  class="button">
+                            <button class="butl" disabled onclick="func('-', 30,fn(this))">-</button>
+                            <div class="pr">0</div>
+                            <button class="butr" onclick="func('+', 30,fn(this))">+</button>
+                        </div>
+                    </div>
+                </div>                                        
+            </div>
+            <div id="comment">Комментарий</div>
+            <div id="commenttext"><textarea ></textarea></div>
+            <button id="butSobr" onclick="clickHandler()">Собрать</button>
+            
+        </div> 
+        <div id="fixb">
+            <div id="buket">
+                <img src="image/bouquet.svg" width="45" height="45" id="icon" alt="bq">
+                <div id="viewprice">0 </div>
+            </div>
+        </div>
+        <div class="background">
+            <div id="basement1" class="fix">
+                <img src="image/logo.jpg" class="logo" width="210" height="60" alt="LOGO">
+                <div id="contacts2" class = "text"> г. Иркутск
+                    ул. Уличная, 99
+                    +7 (999) 999-99-00</div>
+            </div>
+        </div>
+        
+    </body>
+</html>

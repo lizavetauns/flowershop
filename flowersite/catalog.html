@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Цветочный магазин. Каталог</title>
+        <link rel="stylesheet" href="style_main.css">
+        <link rel="stylesheet" href="style_sbor.css">
+        <link rel="stylesheet" href="style_catalog.css">
+    </head> 
+    <body bgcolor= "#faf2f2">
+        <div id="header" class="background"> 
+            <div id="header1" class="fix">
+                <div id="headverh">                   
+                    <div class="headRL">
+                        <div id="contacts" class = "text"> г. Иркутск
+                        ул. Уличная, 99
+                        +7 (999) 999-99-00</div>
+                    </div>
+                    <div id="headright" class="headRL" >
+                        <div id = "corsina"> <a href="corsina.html"><img src="image/corsine.svg" id="corsine" width="50" height="35" alt="LOGO"> </a>
+                            <div class = "text">0 руб.</div>
+                        </div>
+                    </div>
+                   <div class = "text"> <a href="Fsite.html" ><img src="image/logo.jpg" class="logo" width="210" height="60" alt="LOGO"> </a></div> 
+                </div>
+                <div id="headniz">
+                    <div id="navigation" class = "text"><a href="catalog.html" >КАТАЛОГ</a> <a href="sbor.html" class = "pad">СОБРАТЬ БУКЕТ</a> <a href="About.html" class = "pad">О НАС</a></div>        
+                </div> 
+            </div>            
+        </div>
+
+        <div id="content" class="fix">
+            <div class="str"></div>
+            <div id="left">
+                <div class="typeFilter">Цена</div>
+                <div id="price">        
+                    <input class="pricem" type="text" name="price:min" data-min-val="500" value="500" data-previousmin="500">&nbsp;—&nbsp;
+                    <input class="pricem" type="text" name="price:max" data-max-val="55000" value="55 000" data-previousmax="55000">
+                </div>
+                <div>    
+                    <div class="typeFilter" data-filter-label="цветы">Цветы</div>    
+                    <div>       
+                         <div data-type="checkbox">                  
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Розы" data-filter-value="Розы">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Розы</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Лилии" data-filter-value="Лилии">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Лилии</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Ромашки" data-filter-value="Ромашки">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Ромашки</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Гвоздики" data-filter-value="Гвоздики">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Гвоздики</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Гортензии" data-filter-value="Гортензии">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Гортензии</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Тюльпаны" data-filter-value="Тюльпаны">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Тюльпаны</span>
+                            </label>
+                        </div>    
+                    </div>
+                </div>
+                <div>    
+                    <div class="typeFilter" data-filter-label="прочие">Прочие товары</div>    
+                    <div>       
+                         <div data-type="checkbox">                  
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Обертка" data-filter-value="Обертка">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Обертка</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Открытки" data-filter-value="Открытки">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Открытки</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Сувениры" data-filter-value=Сувениры">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Сувениры</span>
+                            </label>
+                            <label>
+                                <input class="checkbox" type="checkbox" name="Ленты" data-filter-value="Ленты">
+                                <div class="t-checkbox__indicator">
+                                    
+                                </div>
+                                <span class="title">Ленты</span>
+                            </label>
+                        </div>    
+                    </div>
+                </div>
+            </div>              
+            <div id="right">
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"> 
+                    <div class="card">
+                        <img src="image/№2.jpg" class="image" width="150" height="150" alt="flower">
+                        <div class = "name">Букет</div>
+                        <div class = "price">1000 руб.</div>
+                        <div class="opis">Состав: цветок1, цветок2, цветок3</div>
+                        <div class="button">
+                            <form action="card.html"><button>Подробнее</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="str"></div>
+        </div>
+
+        <div class="background">
+            <div id="basement1" class="fix">
+                <img src="image/logo.jpg" class="logo" width="210" height="60" alt="LOGO">
+                <div id="contacts2" class = "text"> г. Иркутск
+                    ул. Уличная, 99
+                    +7 (999) 999-99-00</div>
+            </div>
+        </div>
+    </body>
+</html>

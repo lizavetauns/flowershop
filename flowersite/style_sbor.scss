@@ -1,0 +1,129 @@
+#content{
+    height: 2700px;
+}
+#flowers{
+    width: 800;
+    height: 855px;
+}
+.Decor{
+    width: 800;
+    height: 580px;
+}
+#lenta{
+    width: 800;
+    height: 305px;
+}
+.zag{
+    color:black;
+    font-size: 19pt;
+    font-weight: bold;
+}
+.block{
+    width: 190px;
+    height: 265px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.card{
+    width: 176px;
+    height: 251px;
+    border: 2px solid rgb(189, 188, 188);
+    background-color: white;
+}
+.card:hover{
+    border-color: rgb(202, 75, 124);
+}
+.cardBorder{
+    border-color: rgb(202, 75, 124);
+}
+.image{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.name{
+    text-align: center;
+    font-size: 11pt;
+}
+.price{
+    text-align: center;
+    font-size: 15pt;
+}
+.button{
+    margin-top: 10px;
+    text-align: center;
+}
+button{
+    text-align: center;
+    font-size: 12pt;
+    border-color: rgb(250, 61, 112);
+    background-color: transparent;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(250, 61, 112);
+}
+button:disabled {
+    border-color: rgb(153, 146, 148);
+    background-color: white;
+    cursor: default;
+}
+#comment{
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 30px;
+}
+textarea{
+    width: 800px;
+    height: 150px;
+    resize: none;
+    font-size: 13pt;
+}
+#butSobr{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 12pt;
+    border-color: rgb(250, 61, 112);
+    background-color: rgb(250, 61, 112);
+    width: 100px;
+    height: 27px;
+    color: #FFFFFF;
+}
+.pr{
+    width: 50px;
+    float: left;
+}
+.butl{
+    margin-left: 35px;
+    float: left;
+}
+.butr{
+    margin-right: 35px;
+    float: right;
+}
+#buket{
+    height: 55px;
+    width: 55px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 100%;
+    position: absolute;
+    right: 4%;
+    top: -250px;
+    text-align: center;
+    transition: transform 0.25s;
+    box-shadow: 1px 1px 3px ;
+}
+#buket:hover {
+    transform: scale(1.2);
+}
+#fixb{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#icon{
+    margin-top: 5px;
+}

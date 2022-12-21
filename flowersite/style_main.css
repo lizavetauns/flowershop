@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FFFFFF;
+}
+
+a:hover {
+  color: #d6b2bd;
+}
+
+/* шапка */
+#header {
+  height: 180px;
+  width: 100%;
+}
+
+#header1 {
+  height: 180px;
+}
+
+#headverh {
+  height: 130px;
+  font-size: 10pt;
+}
+
+.logo {
+  position: relative;
+  margin-top: 30px;
+  text-align: left;
+}
+
+#contacts {
+  position: relative;
+  width: 200px;
+  line-height: 40px;
+  margin-left: 10px;
+  top: 20px;
+}
+
+#headright {
+  left: 50%;
+}
+
+#corsina {
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 440px;
+  transition: transform 0.25s;
+}
+
+#corsina:hover {
+  transform: scale(1.2);
+}
+
+#headniz {
+  height: 50px;
+}
+
+#navigation {
+  font-weight: bold;
+  font-size: 13pt;
+  margin: auto;
+}
+
+.pad {
+  padding-left: 15px;
+}
+
+/* основа */
+#content {
+  padding-top: 30px;
+  background-color: #faf2f2;
+  height: 1455px;
+  padding-left: 100px;
+}
+
+/* подвал */
+#basement1 {
+  height: 160px;
+}
+
+#contacts2 {
+  position: relative;
+  width: 250px;
+  line-height: 40px;
+  bottom: 70px;
+  margin: auto;
+}
+
+/* классы */
+.background {
+  background-color: #ca758e;
+}
+
+.fix {
+  margin: auto;
+  width: 900px;
+}
+
+.headRL {
+  position: absolute;
+  width: 500px;
+  height: 130px;
+}/*# sourceMappingURL=style_main.css.map */
